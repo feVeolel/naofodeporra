@@ -1,0 +1,236 @@
+local G2L = {};
+
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[LDS HUB COLOR WHEEL]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
+
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["2"]["Size"] = UDim2.new(0.26259, 0, 0.30255, 0);
+G2L["2"]["Position"] = UDim2.new(0.71132, 0, 0.34863, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["2"]["Name"] = [[ColorEditor]];
+
+G2L["3"] = Instance.new("TextButton", G2L["2"]);
+G2L["3"]["Active"] = false;
+G2L["3"]["AutoButtonColor"] = false;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3"]["Selectable"] = false;
+G2L["3"]["Size"] = UDim2.new(0.07282, 0, 0.70175, 0);
+G2L["3"]["Name"] = [[ValueSelector]];
+G2L["3"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["3"]["Text"] = [[]];
+G2L["3"]["Position"] = UDim2.new(0.05341, 0, 0.23898, 0);
+
+G2L["4"] = Instance.new("UIGradient", G2L["3"]);
+G2L["4"]["Rotation"] = -90;
+G2L["4"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 255, 255))};
+
+G2L["5"] = Instance.new("UIStroke", G2L["3"]);
+G2L["5"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+G2L["6"] = Instance.new("Frame", G2L["3"]);
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6"]["Size"] = UDim2.new(1, 0, 0, 5);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["6"]["Name"] = [[Cursor]];
+
+G2L["7"] = Instance.new("ImageButton", G2L["2"]);
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["7"]["Image"] = [[rbxassetid://11224004075]];
+G2L["7"]["Size"] = UDim2.new(0.48544, 0, 0.70175, 0);
+G2L["7"]["BackgroundTransparency"] = 1;
+G2L["7"]["Name"] = [[ColorWheel]];
+G2L["7"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["7"]["Position"] = UDim2.new(0.43496, 0, 0.56842, 0);
+
+G2L["8"] = Instance.new("ImageLabel", G2L["7"]);
+G2L["8"]["ZIndex"] = 4;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["8"]["Image"] = [[rbxassetid://11226149359]];
+G2L["8"]["Size"] = UDim2.new(0, 15, 0, 15);
+G2L["8"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["8"]["BackgroundTransparency"] = 1;
+G2L["8"]["Name"] = [[Cursor]];
+G2L["8"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+G2L["9"] = Instance.new("Frame", G2L["2"]);
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9"]["Size"] = UDim2.new(0.24272, 0, 0.35088, 0);
+G2L["9"]["Position"] = UDim2.new(0.72125, 0, 0.39047, 0);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+
+G2L["a"] = Instance.new("LocalScript", G2L["2"]);
+G2L["a"]["Name"] = [[ColorWheel_LocalScript]];
+
+G2L["b"] = Instance.new("TextLabel", G2L["2"]);
+G2L["b"]["TextWrapped"] = true;
+G2L["b"]["TextStrokeTransparency"] = 0;
+G2L["b"]["TextScaled"] = true;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(53, 53, 53);
+G2L["b"]["TextSize"] = 14;
+G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["b"]["TextColor3"] = Color3.fromRGB(171, 86, 255);
+G2L["b"]["Size"] = UDim2.new(1, 0, 0.17544, 0);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["b"]["Text"] = [[Color Wheel LDS HUB!]];
+
+G2L["c"] = Instance.new("UICorner", G2L["b"]);
+G2L["c"]["CornerRadius"] = UDim.new(0.2, 0);
+
+G2L["d"] = Instance.new("UICorner", G2L["2"]);
+G2L["d"]["CornerRadius"] = UDim.new(0.05, 0);
+
+G2L["e"] = Instance.new("TextButton", G2L["2"]);
+G2L["e"]["TextWrapped"] = true;
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["TextSize"] = 14;
+G2L["e"]["TextColor3"] = Color3.fromRGB(171, 86, 255);
+G2L["e"]["TextScaled"] = true;
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(27, 27, 27);
+G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/DenkOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["e"]["Size"] = UDim2.new(0.4733, 0, 0.09825, 0);
+G2L["e"]["Name"] = [[Close]];
+G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["Text"] = [[Click To Close]];
+G2L["e"]["Position"] = UDim2.new(0.26214, 0, 1.02456, 0);
+
+G2L["f"] = Instance.new("UICorner", G2L["e"]);
+G2L["f"]["CornerRadius"] = UDim.new(0.3, 0);
+
+local function C_a()
+local script = G2L["a"];
+	local abs, pi, sin, asin, acos, sign, deg, rad, clamp = math.abs, math.pi, math.sin, math.asin, math.acos, math.sign, math.deg, math.rad, math.clamp 
+	
+	local startAxis = Vector2.new(1, 0)
+	local barOffset = 36
+	
+	local Frame = script.Parent.Frame
+	local ColorWheel = script.Parent.ColorWheel
+	local ColorWheel_Radius = ColorWheel.AbsoluteSize/2
+	local ColorWheel_Cursor = ColorWheel.Cursor
+	local ValueSelector = script.Parent.ValueSelector
+	local Close = script.Parent.Close
+	
+	Close.MouseButton1Down:Connect(function()
+		script.Parent.Parent:Destroy()
+	end)
+	
+	function setColor(newColor)
+		Frame.BackgroundColor3 = newColor
+	end
+	
+	local function updateValueSelector(newColor)
+		ValueSelector.BackgroundColor3 = newColor
+	end
+	
+	local function getValue()
+		return ValueSelector:GetAttribute("Value") or 1
+	end
+	
+	local function getColorbyVector(vector: Vector2)
+		
+		local cosVector, sinVector = startAxis:Dot(vector.Unit), startAxis:Cross(vector.Unit)
+		local arcCosVector, arcSinVector = acos(cosVector), asin(sinVector)
+		
+		if sign(arcSinVector) <= 0 then
+			arcCosVector = rad(deg(2*pi) - deg(arcCosVector))
+		end
+		
+		local hue: number = deg(arcCosVector)/360
+		
+		local saturation: number = clamp((vector.Magnitude/(ColorWheel_Radius.Magnitude))/sin(rad(45)), 0, 1)
+		
+		local value: number = getValue()
+		
+		local color = Color3.fromHSV(hue, saturation, value)
+		return color
+	end
+	
+	local function selectNewColor(x, y)
+		local SizeOffet = ColorWheel.AbsoluteSize/2
+		local ColorWheelOffset: Vector2 = ColorWheel.AbsolutePosition + SizeOffet
+	
+		local position: Vector2 = (Vector2.new(x, y - barOffset) - ColorWheelOffset)
+		
+		local relativePosition: Vector2 = position + ColorWheel_Radius
+		
+		if position.Magnitude >= ColorWheel_Radius.X then
+			position = position.Unit * ColorWheel_Radius.X
+			relativePosition = position + ColorWheel_Radius
+		end
+		
+		local rx, ry = relativePosition.X, relativePosition.Y
+		ColorWheel_Cursor.Position = UDim2.fromOffset(rx, ry)
+		
+		position = Vector2.new(position.X, -position.Y)
+		
+		setColor(getColorbyVector(position))
+		ColorWheel:SetAttribute("LastVector", position)
+	end
+	
+	ColorWheel.MouseButton1Down:Connect(function(x, y)
+		local movedConnection
+		local leaveConnection
+		local upConnection
+		
+		movedConnection = ColorWheel.MouseMoved:Connect(selectNewColor)
+		
+		local function disconnect(x, y)
+			selectNewColor(x, y)
+			
+			movedConnection:Disconnect()
+			leaveConnection:Disconnect()
+			upConnection:Disconnect()
+		end
+		leaveConnection = ColorWheel.MouseLeave:Connect(disconnect)
+		upConnection = ColorWheel.MouseButton1Up:Connect(disconnect)
+		
+		selectNewColor(x, y)
+	end)
+	
+	
+	local function setNewValue(_,y)
+		local ratio = (y - ValueSelector.AbsolutePosition.Y - 36)/ValueSelector.AbsoluteSize.Y
+		ratio = math.clamp(ratio, 0, 1)
+		ValueSelector:SetAttribute("Value", 1-ratio)
+		ColorWheel.ImageColor3 = Color3.fromRGB(255 * (1-ratio), 255 * (1-ratio), 255 * (1-ratio))
+		
+		local lastVector = ColorWheel:GetAttribute("LastVector")
+		if lastVector then
+			setColor(getColorbyVector(lastVector))
+		end
+		
+		ValueSelector.Cursor.Position = UDim2.new(0, 0, ratio, 0)
+	end
+	
+	ValueSelector.MouseButton1Down:Connect(function(_, y)
+		
+		local movedConnection
+		local leaveConnection
+		local upConnection
+		
+		movedConnection = ValueSelector.MouseMoved:Connect(setNewValue)
+		
+		local function disconnect(_, y)
+			setNewValue(nil, y)
+			
+			movedConnection:Disconnect()
+			leaveConnection:Disconnect()
+			upConnection:Disconnect()
+		end
+		leaveConnection = ValueSelector.MouseLeave:Connect(disconnect)
+		upConnection = ValueSelector.MouseButton1Up:Connect(disconnect)
+		
+		setNewValue(nil, y)
+	end)
+	
+	
+		
+end;
+task.spawn(C_a);
+
+return G2L["1"], require;
